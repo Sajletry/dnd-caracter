@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { Test } from "./features/testFeature";
+import { SpellBookComponent } from "./features/spellBook";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import Grid from "@material-ui/core/Grid";
 
 class App extends React.Component {
     public render(): React.ReactNode {
         return (
-            <div>
+            <Grid item={true} xs={12} style={{ padding: 20 }}>
                 <Provider store={store}>
                     <Router>
-                        <Route path="/" component={Test}/>
+                        <Route path="/" component={SpellBookComponent}/>
                     </Router>
                 </Provider>
-            </div>
+            </Grid>
         );
     }
 }

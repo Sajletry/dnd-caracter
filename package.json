@@ -19,6 +19,7 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@material-ui/core": "3.9.1",
     "@types/jest": "23.3.10",
     "@types/node": "10.12.15",
     "@types/react": "16.7.17",

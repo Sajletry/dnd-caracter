@@ -1,27 +1,24 @@
-export interface AppInterface {
-    spellBook: Spell[];
-    charges: Charges;
-    preparedList: Spell[];
-    userChanceIncriment: number;
+export interface IAppInterface {
+    spellBook: IBaseSpell[];
+    charges: ICharges;
+    preparedList: IBaseSpell[];
+    userChanceIncrement: number;
 }
 
-export interface Spell {
-
+export interface ICharges {
+    total: ICharge[],
+    available: ICharge[]
 }
 
-export interface Charges {
-    total: Charge[],
-    available: Charge[]
-}
-
-export interface Charge {
-    id: string; //uid/guid,
+export interface ICharge {
+    id: string; // uid/guid,
     level: number;
     isAvailable: boolean;
 }
 
-export interface BaseSpell {
-    id: string; //uid/guid,
+export interface IBaseSpell {
+    id: string; // uid/guid,
+    damageType: DamageType;
     level: number;
     description: string;
     ingredients: Ingridient[];
@@ -31,7 +28,11 @@ export interface BaseSpell {
     Duration: SpellDuration;
 }
 
-export interface ChanceRolledSpell {
+export enum DamageType {
+    fire = 'fire',
+}
+
+export interface IChanceRolledSpell {
     rolls: [ {
         chanceIncrement: number;
         chanceDice: number;
@@ -40,7 +41,7 @@ export interface ChanceRolledSpell {
     } ]
 }
 
-export interface DamageRolledSpell {
+export interface IDamageRolledSpell {
     rolls: [ {
         damageDice: number;
         damageIncrement: number;
@@ -49,7 +50,7 @@ export interface DamageRolledSpell {
 }
 
 export interface Ingridient {
-    id: string; //uid/guid,
+    id: string; // uid/guid,
     name: string;
     amount: number;
 }

@@ -3,7 +3,7 @@ import * as constants from './constants';
 import * as selectors from './selectors';
 import { reducer } from './reducer';
 import { connect } from "react-redux";
-import { Test as component } from "./Test";
+import { SpellBook as component } from "./SpellBook";
 import { ITestActions, ITestSelectors } from "./interface";
 import { IState } from "../../store/combinedReducer";
 
@@ -15,7 +15,7 @@ const mapDispatchToProps = ( dispatch: any ): ITestActions => ( {
     testAction: ( value: boolean ) => dispatch( actions.dispatchTestAction( value ) )
 } );
 
-export const TestFeature = {
+export const SpellBook = {
     actions,
     constants,
     reducer,
@@ -24,4 +24,4 @@ export const TestFeature = {
 
 export * from './interface';
 
-export const Test = connect( mapStateToProps, mapDispatchToProps )( component );
+export const SpellBookComponent = connect( mapStateToProps, mapDispatchToProps )( component );
