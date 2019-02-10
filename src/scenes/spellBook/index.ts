@@ -3,16 +3,17 @@ import * as constants from './constants';
 import * as selectors from './selectors';
 import { reducer } from './reducer';
 import { connect } from "react-redux";
-import { SpellBook as component } from "./SpellBook";
-import { ITestActions, ITestSelectors } from "./interface";
+import { SpellBook as component } from "./container";
+import { IActions, ISelectors } from "./interface";
 import { IState } from "../../store/combinedReducer";
 
-const mapStateToProps = ( state: IState ): ITestSelectors => ( {
-    testValue: selectors.getTestValue( state )
+export const FEATURE_NAME = 'allSpells';
+const mapStateToProps = ( state: IState ): ISelectors => ( {
+    selectAllSpells: selectors.selectAllSpells(state)
 } );
 
-const mapDispatchToProps = ( dispatch: any ): ITestActions => ( {
-    testAction: ( value: boolean ) => dispatch( actions.dispatchTestAction( value ) )
+const mapDispatchToProps = ( dispatch: any ): IActions => ( {
+    getAllSpells: ( ) => dispatch( actions.getAllSpells(  ) )
 } );
 
 export const SpellBook = {

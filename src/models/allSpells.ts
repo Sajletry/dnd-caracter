@@ -3608,4 +3608,16 @@ export const allSpells = [ {
     spellDuration: " 1 час",
     classes: " Бард, Жрец, Воин, Плут, Чародей, Колдун, Волшебник",
     description: "Это заклинание дарует существу, которого вы касаетесь, способность понимать все языки, которые оно слышит. Более того, когда цель говорит, все существа, знающие хотя бы один язык, и слышащие цель, понимают, что она сказала."
-} ]
+} ];
+
+export interface ISpell{
+    name: string;
+        level: string;
+        school: string;
+        castDuration: string;
+        distance: string;
+        components: string;
+        spellDuration:string;
+        classes: string;
+        description: string;
+}

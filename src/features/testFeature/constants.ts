@@ -1,1 +1,0 @@
-export const CHANGE_TEST = 'CHANGE_TEST';

@@ -1,6 +1,6 @@
 export interface IAction<T> {
     type: string;
-    payload: T;
+    payload?: T;
 }
 
 export type IDispatch<T> = (action: any) => void;

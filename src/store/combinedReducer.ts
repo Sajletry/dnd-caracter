@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux'
-// import {testReducer, ITestReducerState } from "../features/testFeature/reducer";
-import { ITestReducerState,TestFeature } from '../features/testFeature';
+import {combineReducers} from 'redux'
+import {reducer as spellBookReducer} from '../scenes/spellBook/reducer'
+import {IState as ISpellBookState} from '../scenes/spellBook/interface'
 
 export interface IState {
-    TestFeature: ITestReducerState
+    SpellBookState: ISpellBookState
 };
 
-export const rootReducer = combineReducers( {
-    TestFeature: TestFeature.reducer
-} );
+export const rootReducer = combineReducers({
+    SpellBookState: spellBookReducer
+});
