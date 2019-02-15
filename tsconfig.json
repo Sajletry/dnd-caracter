@@ -22,6 +22,7 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": false,
+    "experimentalDecorators":true,
     "noUnusedLocals": true
   },
   "exclude": [

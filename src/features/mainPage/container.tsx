@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {IProps} from "./interface";
+import {IProps} from "./types";
+import { Link } from 'react-router-dom';
 
 export class Container extends React.Component<IProps> {
     constructor(props: IProps) {
@@ -11,7 +12,8 @@ export class Container extends React.Component<IProps> {
     public render(): React.ReactNode {
         return (
                 <div className='spell-book paper'>
-                    Spell book main page
+                    <Link to="/allSpells">All spells list</Link><br/>
+                    <Link to="/characterClasses">List of characters classes</Link>
                 </div>
         )
     }

@@ -5,8 +5,9 @@ import {store} from "../store/index";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Grid from "@material-ui/core/Grid";
 
-import {MainScene} from "../scenes/main";
-import {SpellBookComponent} from "../scenes/spellBook";
+import {MainPage} from "../features/mainPage";
+import {SpellBook} from "../features/spellBook";
+import {CharacterClasses} from "../features/characterClasses";
 
 class App extends React.Component {
     public render(): React.ReactNode {
@@ -15,8 +16,9 @@ class App extends React.Component {
                 <Provider store={store}>
                     <Router>
                         <Switch>
-                            <Route exact={true}  path="/" component={MainScene}/>
-                            <Route path="/allSpells" component={SpellBookComponent}/>
+                            <Route exact={true}  path="/" component={MainPage}/>
+                            <Route path="/allSpells" component={SpellBook}/>
+                            <Route path="/characterClasses" component={CharacterClasses}/>
                         </Switch>
                     </Router>
                 </Provider>

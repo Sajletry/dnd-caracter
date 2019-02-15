@@ -1,11 +1,15 @@
 import {combineReducers} from 'redux'
-import {reducer as spellBookReducer} from '../scenes/spellBook/reducer'
-import {IState as ISpellBookState} from '../scenes/spellBook/interface'
+import {reducer as spellBookReducer} from '../features/spellBook/reducer'
+import {reducer as characterClassesReducer} from '../features/characterClasses/reducer'
+import {IState as ISpellBookState} from '../features/spellBook/types'
+import {IState as ICharacterClassesState} from '../features/characterClasses/types'
 
 export interface IState {
-    SpellBookState: ISpellBookState
+    SpellBookState: ISpellBookState;
+    CharacterClassesState:ICharacterClassesState;
 };
 
 export const rootReducer = combineReducers({
-    SpellBookState: spellBookReducer
+    SpellBookState: spellBookReducer,
+    CharacterClassesState: characterClassesReducer
 });

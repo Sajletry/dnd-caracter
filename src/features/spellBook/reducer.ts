@@ -1,8 +1,5 @@
 import * as constants from './constants';
-import { IAction } from "./actions";
-import { IState } from "./interface";
-
-
+import { IState,IAction } from "./types";
 const initialState: IState = {
     allSpells: [],
 };
