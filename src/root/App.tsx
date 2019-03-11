@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import {MainPage} from "../features/mainPage";
 import {SpellBook} from "../features/spellBook";
 import {CharacterClasses} from "../features/characterClasses";
+import { AvailableCharacters } from "../features/availableCharacters";
 
 class App extends React.Component {
     public render(): React.ReactNode {
@@ -19,6 +20,7 @@ class App extends React.Component {
                             <Route exact={true}  path="/" component={MainPage}/>
                             <Route path="/allSpells" component={SpellBook}/>
                             <Route path="/characterClasses" component={CharacterClasses}/>
+                            <Route path="/availableCharacters" component={AvailableCharacters}/>
                         </Switch>
                     </Router>
                 </Provider>

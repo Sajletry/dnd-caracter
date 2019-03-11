@@ -23,9 +23,23 @@ const wizardLevelsConfig = [
     { level: 20, masteryScore: 6, spellsCells: [ 5, 4, 3, 3, 3, 3, 2, 2, 1, 1 ] }
 
 ];
+export enum CharacterClassesNames {
+    Bard='Bard',
+    Cleric='Cleric',
+    Fighter='Fighter',
+    Rogue='Rogue',
+    Sorcerer='Sorcerer',
+    Warlock='Warlock',
+    Wizard='Wizard',
+    Paladin='Paladin',
+    Druid='Druid',
+    Monk='Monk',
+    Ranger='Ranger',
+    Barbarian='Barbarian'
+}
 
 export const wizardClass: ICharacterClass = {
-    name: 'Wizard',
+    name: CharacterClassesNames.Wizard,
     shouldPrepareSpells: true,
     shouldUseCharges: true,
     canUseSpells: true,

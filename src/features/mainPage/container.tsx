@@ -14,6 +14,7 @@ export class Container extends React.Component<IProps> {
                 <div className='spell-book paper'>
                     <Link to="/allSpells">All spells list</Link><br/>
                     <Link to="/characterClasses">List of characters classes</Link>
+                    <Link to="/availableCharacters">List of available characters</Link>
                 </div>
         )
     }

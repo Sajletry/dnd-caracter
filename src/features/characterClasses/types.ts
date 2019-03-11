@@ -1,3 +1,5 @@
+import { CharacterClassesNames } from "../../models/allClasses";
+
 export interface IState {
     charactersClasses: ICharacterClass[]
 }
@@ -14,7 +16,7 @@ export interface IProps extends IActions, ISelectors {
 }
 
 export interface ICharacterClass {
-    name: string;
+    name: CharacterClassesNames;
     canUseSpells: boolean;
     shouldPrepareSpells: boolean;
     shouldUseCharges: boolean;
